@@ -33,16 +33,10 @@
     <None Include="CQL.g4" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="generated\CQLBaseListener.cpp">
-      <Filter>generated</Filter>
-    </ClCompile>
     <ClCompile Include="generated\CQLBaseVisitor.cpp">
       <Filter>generated</Filter>
     </ClCompile>
     <ClCompile Include="generated\CQLLexer.cpp">
-      <Filter>generated</Filter>
-    </ClCompile>
-    <ClCompile Include="generated\CQLListener.cpp">
       <Filter>generated</Filter>
     </ClCompile>
     <ClCompile Include="generated\CQLParser.cpp">
@@ -56,16 +50,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="generated\CQLBaseListener.h">
-      <Filter>generated</Filter>
-    </ClInclude>
     <ClInclude Include="generated\CQLBaseVisitor.h">
       <Filter>generated</Filter>
     </ClInclude>
     <ClInclude Include="generated\CQLLexer.h">
-      <Filter>generated</Filter>
-    </ClInclude>
-    <ClInclude Include="generated\CQLListener.h">
       <Filter>generated</Filter>
     </ClInclude>
     <ClInclude Include="generated\CQLParser.h">
