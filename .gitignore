@@ -32,3 +32,6 @@
 *.app
 
 .DS_Store
+.vs/
+.vscode/
+*.vcxproj.user
