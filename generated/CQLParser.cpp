@@ -2,7 +2,6 @@
 // Generated from ./CQL.g4 by ANTLR 4.13.1
 
 
-#include "CQLListener.h"
 #include "CQLVisitor.h"
 
 #include "CQLParser.h"
@@ -190,18 +189,6 @@ size_t CQLParser::QueryContext::getRuleIndex() const {
   return CQLParser::RuleQuery;
 }
 
-void CQLParser::QueryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQuery(this);
-}
-
-void CQLParser::QueryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQuery(this);
-}
-
 
 std::any CQLParser::QueryContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -257,18 +244,6 @@ CQLParser::ComplexQueryContext* CQLParser::ComplexQueryContext::complexQuery() {
 
 size_t CQLParser::ComplexQueryContext::getRuleIndex() const {
   return CQLParser::RuleComplexQuery;
-}
-
-void CQLParser::ComplexQueryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterComplexQuery(this);
-}
-
-void CQLParser::ComplexQueryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitComplexQuery(this);
 }
 
 
@@ -341,16 +316,6 @@ tree::TerminalNode* CQLParser::WithinContext::WITHIN() {
 
 CQLParser::WithinContext::WithinContext(QueryOperatorContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::WithinContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWithin(this);
-}
-void CQLParser::WithinContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWithin(this);
-}
 
 std::any CQLParser::WithinContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -366,16 +331,6 @@ tree::TerminalNode* CQLParser::ContainingContext::CONTAINING() {
 
 CQLParser::ContainingContext::ContainingContext(QueryOperatorContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::ContainingContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterContaining(this);
-}
-void CQLParser::ContainingContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitContaining(this);
-}
 
 std::any CQLParser::ContainingContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -451,18 +406,6 @@ size_t CQLParser::SimpleQueryContext::getRuleIndex() const {
   return CQLParser::RuleSimpleQuery;
 }
 
-void CQLParser::SimpleQueryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleQuery(this);
-}
-
-void CQLParser::SimpleQueryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleQuery(this);
-}
-
 
 std::any CQLParser::SimpleQueryContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -526,18 +469,6 @@ CQLParser::SequencePartContext* CQLParser::SequenceContext::sequencePart(size_t 
 
 size_t CQLParser::SequenceContext::getRuleIndex() const {
   return CQLParser::RuleSequence;
-}
-
-void CQLParser::SequenceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSequence(this);
-}
-
-void CQLParser::SequenceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSequence(this);
 }
 
 
@@ -625,18 +556,6 @@ tree::TerminalNode* CQLParser::SequencePartContext::NUMBER() {
 
 size_t CQLParser::SequencePartContext::getRuleIndex() const {
   return CQLParser::RuleSequencePart;
-}
-
-void CQLParser::SequencePartContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSequencePart(this);
-}
-
-void CQLParser::SequencePartContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSequencePart(this);
 }
 
 
@@ -771,18 +690,6 @@ size_t CQLParser::TagContext::getRuleIndex() const {
   return CQLParser::RuleTag;
 }
 
-void CQLParser::TagContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTag(this);
-}
-
-void CQLParser::TagContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTag(this);
-}
-
 
 std::any CQLParser::TagContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -871,18 +778,6 @@ size_t CQLParser::AttributeContext::getRuleIndex() const {
   return CQLParser::RuleAttribute;
 }
 
-void CQLParser::AttributeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAttribute(this);
-}
-
-void CQLParser::AttributeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAttribute(this);
-}
-
 
 std::any CQLParser::AttributeContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -944,16 +839,6 @@ CQLParser::PositionWordContext* CQLParser::PositionPositionWordContext::position
 
 CQLParser::PositionPositionWordContext::PositionPositionWordContext(PositionContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::PositionPositionWordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPositionPositionWord(this);
-}
-void CQLParser::PositionPositionWordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPositionPositionWord(this);
-}
 
 std::any CQLParser::PositionPositionWordContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -977,16 +862,6 @@ CQLParser::PositionLongContext* CQLParser::PositionPositionLongContext::position
 
 CQLParser::PositionPositionLongContext::PositionPositionLongContext(PositionContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::PositionPositionLongContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPositionPositionLong(this);
-}
-void CQLParser::PositionPositionLongContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPositionPositionLong(this);
-}
 
 std::any CQLParser::PositionPositionLongContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1067,18 +942,6 @@ size_t CQLParser::PositionWordContext::getRuleIndex() const {
   return CQLParser::RulePositionWord;
 }
 
-void CQLParser::PositionWordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPositionWord(this);
-}
-
-void CQLParser::PositionWordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPositionWord(this);
-}
-
 
 std::any CQLParser::PositionWordContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1134,18 +997,6 @@ CQLParser::PositionLongContext* CQLParser::PositionLongContext::positionLong() {
 
 size_t CQLParser::PositionLongContext::getRuleIndex() const {
   return CQLParser::RulePositionLong;
-}
-
-void CQLParser::PositionLongContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPositionLong(this);
-}
-
-void CQLParser::PositionLongContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPositionLong(this);
 }
 
 
@@ -1227,18 +1078,6 @@ CQLParser::PositionLongPartContext* CQLParser::PositionLongPartContext::position
 
 size_t CQLParser::PositionLongPartContext::getRuleIndex() const {
   return CQLParser::RulePositionLongPart;
-}
-
-void CQLParser::PositionLongPartContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPositionLongPart(this);
-}
-
-void CQLParser::PositionLongPartContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPositionLongPart(this);
 }
 
 
@@ -1336,16 +1175,6 @@ CQLParser::ValuePartContext* CQLParser::AttValuePairEqualsContext::valuePart() {
 
 CQLParser::AttValuePairEqualsContext::AttValuePairEqualsContext(AttValuePairContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::AttValuePairEqualsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAttValuePairEquals(this);
-}
-void CQLParser::AttValuePairEqualsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAttValuePairEquals(this);
-}
 
 std::any CQLParser::AttValuePairEqualsContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1365,16 +1194,6 @@ CQLParser::ValuePartContext* CQLParser::AttValuePairNotEqualsContext::valuePart(
 
 CQLParser::AttValuePairNotEqualsContext::AttValuePairNotEqualsContext(AttValuePairContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::AttValuePairNotEqualsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAttValuePairNotEquals(this);
-}
-void CQLParser::AttValuePairNotEqualsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAttValuePairNotEquals(this);
-}
 
 std::any CQLParser::AttValuePairNotEqualsContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1390,16 +1209,6 @@ CQLParser::ValuePartContext* CQLParser::AttValuePairDefaultEqualsContext::valueP
 
 CQLParser::AttValuePairDefaultEqualsContext::AttValuePairDefaultEqualsContext(AttValuePairContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::AttValuePairDefaultEqualsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAttValuePairDefaultEquals(this);
-}
-void CQLParser::AttValuePairDefaultEqualsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAttValuePairDefaultEquals(this);
-}
 
 std::any CQLParser::AttValuePairDefaultEqualsContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1491,18 +1300,6 @@ size_t CQLParser::PropNameContext::getRuleIndex() const {
   return CQLParser::RulePropName;
 }
 
-void CQLParser::PropNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPropName(this);
-}
-
-void CQLParser::PropNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPropName(this);
-}
-
 
 std::any CQLParser::PropNameContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1571,16 +1368,6 @@ tree::TerminalNode* CQLParser::RepetitionZeroOrMoreContext::ASTERISK() {
 
 CQLParser::RepetitionZeroOrMoreContext::RepetitionZeroOrMoreContext(RepetitionAmountContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::RepetitionZeroOrMoreContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRepetitionZeroOrMore(this);
-}
-void CQLParser::RepetitionZeroOrMoreContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRepetitionZeroOrMore(this);
-}
 
 std::any CQLParser::RepetitionZeroOrMoreContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1608,16 +1395,6 @@ tree::TerminalNode* CQLParser::RepetitionMinMaxContext::LEFT_RIGHT_BRACKET() {
 
 CQLParser::RepetitionMinMaxContext::RepetitionMinMaxContext(RepetitionAmountContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::RepetitionMinMaxContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRepetitionMinMax(this);
-}
-void CQLParser::RepetitionMinMaxContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRepetitionMinMax(this);
-}
 
 std::any CQLParser::RepetitionMinMaxContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1641,16 +1418,6 @@ tree::TerminalNode* CQLParser::RepetitionExactlyContext::LEFT_RIGHT_BRACKET() {
 
 CQLParser::RepetitionExactlyContext::RepetitionExactlyContext(RepetitionAmountContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::RepetitionExactlyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRepetitionExactly(this);
-}
-void CQLParser::RepetitionExactlyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRepetitionExactly(this);
-}
 
 std::any CQLParser::RepetitionExactlyContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1666,16 +1433,6 @@ tree::TerminalNode* CQLParser::RepetitionZeroOrOneContext::QUESTION_MARK() {
 
 CQLParser::RepetitionZeroOrOneContext::RepetitionZeroOrOneContext(RepetitionAmountContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::RepetitionZeroOrOneContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRepetitionZeroOrOne(this);
-}
-void CQLParser::RepetitionZeroOrOneContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRepetitionZeroOrOne(this);
-}
 
 std::any CQLParser::RepetitionZeroOrOneContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1691,16 +1448,6 @@ tree::TerminalNode* CQLParser::RepetitionOneOrMoreContext::PLUS() {
 
 CQLParser::RepetitionOneOrMoreContext::RepetitionOneOrMoreContext(RepetitionAmountContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::RepetitionOneOrMoreContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRepetitionOneOrMore(this);
-}
-void CQLParser::RepetitionOneOrMoreContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRepetitionOneOrMore(this);
-}
 
 std::any CQLParser::RepetitionOneOrMoreContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1815,18 +1562,6 @@ size_t CQLParser::QuotedStringContext::getRuleIndex() const {
   return CQLParser::RuleQuotedString;
 }
 
-void CQLParser::QuotedStringContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQuotedString(this);
-}
-
-void CQLParser::QuotedStringContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQuotedString(this);
-}
-
 
 std::any CQLParser::QuotedStringContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1894,16 +1629,6 @@ tree::TerminalNode* CQLParser::OrContext::VERTICAL_LINE() {
 
 CQLParser::OrContext::OrContext(BooleanOperatorContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::OrContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOr(this);
-}
-void CQLParser::OrContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOr(this);
-}
 
 std::any CQLParser::OrContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1919,16 +1644,6 @@ tree::TerminalNode* CQLParser::AndContext::AMPERSAND() {
 
 CQLParser::AndContext::AndContext(BooleanOperatorContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::AndContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAnd(this);
-}
-void CQLParser::AndContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAnd(this);
-}
 
 std::any CQLParser::AndContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -1940,16 +1655,6 @@ std::any CQLParser::AndContext::accept(tree::ParseTreeVisitor *visitor) {
 
 CQLParser::ImplicationContext::ImplicationContext(BooleanOperatorContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::ImplicationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterImplication(this);
-}
-void CQLParser::ImplicationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitImplication(this);
-}
 
 std::any CQLParser::ImplicationContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -2033,16 +1738,6 @@ CQLParser::QuotedStringContext* CQLParser::ValuePartStringContext::quotedString(
 
 CQLParser::ValuePartStringContext::ValuePartStringContext(ValuePartContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::ValuePartStringContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterValuePartString(this);
-}
-void CQLParser::ValuePartStringContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitValuePartString(this);
-}
 
 std::any CQLParser::ValuePartStringContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -2066,16 +1761,6 @@ tree::TerminalNode* CQLParser::ValuePartParenthesisedContext::RIGHT_PARENTHESIS(
 
 CQLParser::ValuePartParenthesisedContext::ValuePartParenthesisedContext(ValuePartContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::ValuePartParenthesisedContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterValuePartParenthesised(this);
-}
-void CQLParser::ValuePartParenthesisedContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitValuePartParenthesised(this);
-}
 
 std::any CQLParser::ValuePartParenthesisedContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -2156,16 +1841,6 @@ CQLParser::ValuePartContext* CQLParser::ValueWithoutContext::valuePart() {
 
 CQLParser::ValueWithoutContext::ValueWithoutContext(ValueContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::ValueWithoutContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterValueWithout(this);
-}
-void CQLParser::ValueWithoutContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitValueWithout(this);
-}
 
 std::any CQLParser::ValueWithoutContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
@@ -2189,16 +1864,6 @@ CQLParser::ValueContext* CQLParser::ValueWithContext::value() {
 
 CQLParser::ValueWithContext::ValueWithContext(ValueContext *ctx) { copyFrom(ctx); }
 
-void CQLParser::ValueWithContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterValueWith(this);
-}
-void CQLParser::ValueWithContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CQLListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitValueWith(this);
-}
 
 std::any CQLParser::ValueWithContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CQLVisitor*>(visitor))
